@@ -1,19 +1,30 @@
-## Introduction
+With your ultrasonic distance sensor connected to your Raspberry Pi, and a new Python file open, you are ready to detect distances.
 
-Add project description here. What will learners be making?
+- First, you need create a `DistanceSensor` object, stating the pins you have connected your distance sensor to.
 
-### What you will make
+	```python
+	from gpiozero import DistanceSensor
+	ultrasonic = DistanceSensor(echo=17, trigger=4)
+	```
+- You can measure the distance an object is away from the sensor.
 
-Add something here to showcase here, for example:
+	```python
+	print(ultrasonic.distance)
+	```
 
-<div class="scratch-preview">
-  <iframe allowtransparency="true" width="485" height="402" src="https://scratch.mit.edu/projects/embed/160619869/?autostart=false" frameborder="0"></iframe>
-</div>
+- You can also wait for an object to come into range, or out of range.
 
-Add instructions here. These should explain either how the finished project will work, or explain how to interact with the content above.
+	```python
+	ultrasonic.wait_for_in_range()
+	ultrasonic.wait_for_out_of_range()
+	```
 
-### What you will learn
+- You can call a specific function when an object comes into range or out of range.
 
-This project covers elements from the following strands of the [Raspberry Pi Digital Making Curriculum](http://rpf.io/curriculum):
+```python
+def do_thing():
+    print('Change happened')
 
-+ [Add curriculum strand/level description.](https://www.raspberrypi.org/curriculum/strand/level)
+ultrasonic.when_in_range = do_thing
+ultrasonic.when_out_of_range = do_thing
+```
