@@ -12,14 +12,14 @@ With your ultrasonic distance sensor connected to your Raspberry Pi, and a new P
 	print(ultrasonic.distance)
 	```
 
-- You can also wait for an object to come into range, or out of range.
+- You can also wait for an object to come into range, or go out of range.
 
 	```python
 	ultrasonic.wait_for_in_range()
 	ultrasonic.wait_for_out_of_range()
 	```
 
-- And you can call a specific function whenever an object comes into range, or out of range.
+- And you can call a specific function whenever an object comes into range, or goes out of range.
 
 ```python
 def do_thing():
