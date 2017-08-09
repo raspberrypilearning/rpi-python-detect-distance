@@ -1,0 +1,15 @@
+title: Detecting distances with a Raspberry Pi and Python
+hero_image: images/banner.png
+description: Use an ultrasonic distance sensor to detect distances with a Raspberry Pi and Python
+original_url: https://codeclubprojects.org/en-GB/scratch/rock-band
+theme: turquoise
+duration: 1
+listed: false
+ingredient: true
+copyedit: true
+curriculum: 
+interests: 
+technologies: "electronics, physical computing, python"
+site_areas:
+steps:
+  - title: Detect distances
